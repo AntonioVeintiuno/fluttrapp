@@ -16,9 +16,26 @@ class MyApp extends StatelessWidget {
       ),
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Card(
-              child: Text('Moee'),
+              child: Container(
+              padding: EdgeInsets.all(20.0),
+              child: Column(
+                children: <Widget>[
+                  Text('I Love Flutter',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 30.0
+                    ),
+                  ),
+                  Icon(Icons.favorite,
+                    color: Colors.red,
+                    size: 40,
+                  )
+                ],
+              ),
+            )
             )
           ],
         ),
