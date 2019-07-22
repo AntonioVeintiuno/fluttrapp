@@ -11,6 +11,24 @@ class _MyButtonState extends State<MyButton> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Stateful Widget App'),
+        backgroundColor: Colors.orange[300],
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text('antonio',
+                style: TextStyle(fontSize: 40),
+              ),
+              RaisedButton(
+                child: Text('Update'),
+                onPressed: () {},
+                color: Colors.deepOrangeAccent,
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
