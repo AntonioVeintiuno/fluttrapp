@@ -18,11 +18,12 @@ class _MyButtonState extends State<MyButton> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('antonio',
+              Text('Flutter',
                 style: TextStyle(fontSize: 40),
               ),
+              Padding(padding: EdgeInsets.all(10.0)),
               RaisedButton(
-                child: Text('Update'),
+                child: Text('Update', style: TextStyle(color: Colors.white),),
                 onPressed: () {},
                 color: Colors.deepOrangeAccent,
               )
