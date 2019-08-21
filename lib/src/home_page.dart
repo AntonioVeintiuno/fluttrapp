@@ -10,18 +10,18 @@ class _HomePageState extends State<HomePage> {
   String flutterText = "";
   final TextEditingController controller = TextEditingController();
 
-  void onSubmitted(String value) {
-    setState(() {
-      flutterText = flutterText + "\n" + value;
-      controller.text="";
-    });
+  void showAlert() {
+    AlertDialog dialog = AlertDialog(
+      content: Text('Moe'),
+    );
+    showDialog(context: context, builder: (BuildContext context) {return dialog; });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Stateful Widget App'),
+        title: Text('Demo Alert Dialog'),
         backgroundColor: Colors.green[300],
       ),
       body: Container(
@@ -30,10 +30,9 @@ class _HomePageState extends State<HomePage> {
          children: <Widget>[
            TextField(
             decoration: InputDecoration(hintText: 'text here'),
-            onSubmitted: onSubmitted,
-            controller: controller,
            ),
-           Text(flutterText)
+           Text(flutterText),
+           RaisedButton(child: Text('show alert'),onPressed: showAlert, textColor: Colors.red,)
          ]
        ),
      ),
