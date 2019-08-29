@@ -6,23 +6,39 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+enum DialogAction {
+  yes,
+  no
+}
 class _HomePageState extends State<HomePage> {
-  String flutterText = "";
+  String textInput = "";
   final TextEditingController controller = TextEditingController();
 
-  void showAlert() {
+  void alertResult(DialogAction action){
+    print('tu accion es $action');
+  }
+  void showAlert(String value) {
     AlertDialog dialog = AlertDialog(
-      content: Text('Moe'),
+      content: Text(value),
+      actions: <Widget>[
+        FlatButton(child: Text('Si'), onPressed: (){alertResult(DialogAction.yes);},),
+        FlatButton(child: Text('No'), onPressed: (){alertResult(DialogAction.no); },)
+      ],
     );
     showDialog(context: context, builder: (BuildContext context) {return dialog; });
   }
 
+  void onChange(String value){
+    setState(() {
+      textInput = value;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Demo Alert Dialog'),
-        backgroundColor: Colors.green[300],
+        backgroundColor: Colors.green,
       ),
       body: Container(
        child: Column(
@@ -30,9 +46,10 @@ class _HomePageState extends State<HomePage> {
          children: <Widget>[
            TextField(
             decoration: InputDecoration(hintText: 'text here'),
+            onChanged: onChange,
            ),
-           Text(flutterText),
-           RaisedButton(child: Text('show alert'),onPressed: showAlert, textColor: Colors.red,)
+          //  Text(flutterText),
+           RaisedButton(child: Text('show alert'),onPressed: (){showAlert(textInput);}, textColor: Colors.red,)
          ]
        ),
      ),
