@@ -16,18 +16,21 @@ class _MyTabsState extends State<MyTabs> {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Video Tabs'),
-          backgroundColor: Colors.red,
-          bottom: TabBar(tabs: <Widget>[
-            Tab(icon: Icon(Icons.home)),
-            Tab(icon: Icon(Icons.ondemand_video)),
-            Tab(icon: Icon(Icons.contacts))
-          ],),
+          backgroundColor: Colors.blue,
         ),
         body: TabBarView(children: <Widget>[
           Home(),
           Video(),
           Contacts()
         ],),
+        bottomNavigationBar: Material(
+          color: Colors.blueAccent,
+          child: TabBar(tabs: <Widget>[
+            Tab(icon: Icon(Icons.alarm)),
+            Tab(icon: Icon(Icons.watch_later)),
+            Tab(icon: Icon(Icons.airplanemode_active))
+          ],),
+        ) ,
       )
     );
   }
