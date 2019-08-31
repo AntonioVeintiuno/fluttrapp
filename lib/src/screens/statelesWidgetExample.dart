@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/src/screens/card.dart';
+import 'package:first_app/src/widgets/card.dart';
 
 class StatlessWidgetExample extends StatelessWidget {
   final double iconSize = 40.0;
