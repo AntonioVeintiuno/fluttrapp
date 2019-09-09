@@ -1,3 +1,4 @@
+import 'package:first_app/src/screens/tabs_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,12 +12,14 @@ enum DialogAction {
   no
 }
 class _HomePageState extends State<HomePage> {
+  String titulo = '';
   String textInput = "";
   final TextEditingController controller = TextEditingController();
 
   void alertResult(DialogAction action){
     print('tu accion es $action');
   }
+
   void showAlert(String value) {
     AlertDialog dialog = AlertDialog(
       content: Text(value),
@@ -26,6 +29,10 @@ class _HomePageState extends State<HomePage> {
       ],
     );
     showDialog(context: context, builder: (BuildContext context) {return dialog; });
+  }
+
+  changePage(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => MyTabs()));
   }
 
   void onChange(String value){
@@ -49,7 +56,8 @@ class _HomePageState extends State<HomePage> {
             onChanged: onChange,
            ),
           //  Text(flutterText),
-           RaisedButton(child: Text('show alert'),onPressed: (){showAlert(textInput);}, textColor: Colors.red,)
+           RaisedButton(child: Text('show alert'),onPressed: (){showAlert(textInput);}, textColor: Colors.red,),
+           RaisedButton(child: Text('Change page'),onPressed: (){changePage();}, textColor: Colors.red,)
          ]
        ),
      ),

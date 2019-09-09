@@ -5,17 +5,21 @@ import 'package:flutter/material.dart';
 
 class MyTabs extends StatefulWidget {
   @override
-  _MyTabsState createState() => _MyTabsState();
+  _MyTabsState createState() => _MyTabsState(title: 'Tabs');
 }
 
 class _MyTabsState extends State<MyTabs> {
+  final String title;
+
+  _MyTabsState({@required this.title});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Video Tabs'),
+          title: Text(title),
           backgroundColor: Colors.blue,
         ),
         body: TabBarView(children: <Widget>[
