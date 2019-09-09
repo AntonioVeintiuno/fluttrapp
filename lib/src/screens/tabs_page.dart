@@ -4,6 +4,7 @@ import 'package:first_app/src/screens/tasbs_screens/video.dart';
 import 'package:flutter/material.dart';
 
 class MyTabs extends StatefulWidget {
+  static const String routeName = '/tabs';
   @override
   _MyTabsState createState() => _MyTabsState(title: 'Tabs');
 }

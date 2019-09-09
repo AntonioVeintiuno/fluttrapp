@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-class BateryScreen extends StatefulWidget {
-  @override
-  _BateryScreenState createState() => _BateryScreenState();
-}
 
-class _BateryScreenState extends State<BateryScreen> {
+class BateryScreen extends StatelessWidget {
+  static const String routeName = '/batery';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

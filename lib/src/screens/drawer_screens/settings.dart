@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SettingScreen extends StatefulWidget {
-  @override
-  _SettingScreenState createState() => _SettingScreenState();
-}
-
-class _SettingScreenState extends State<SettingScreen> {
+class SettingScreen extends StatelessWidget {
+  static const String routeName = '/settings';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

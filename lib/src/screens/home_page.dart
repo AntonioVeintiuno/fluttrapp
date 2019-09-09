@@ -2,6 +2,7 @@ import 'package:first_app/src/screens/tabs_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = '/home_page';
   HomePage({Key key}): super(key:key);
   @override
   _HomePageState createState() => _HomePageState();
