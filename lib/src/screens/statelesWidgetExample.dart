@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:first_app/src/screens/card.dart';
+import 'package:first_app/src/widgets/card.dart';
 
 class StatlessWidgetExample extends StatelessWidget {
+  static const String routeName = '/stateless';
   final double iconSize = 40.0;
   final TextStyle textStyle = TextStyle(color: Colors.grey, fontSize: 30.0);
 
