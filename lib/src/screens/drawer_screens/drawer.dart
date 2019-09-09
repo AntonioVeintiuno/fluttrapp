@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-class Drawer extends StatefulWidget {
+class DrawerScreen extends StatefulWidget {
   @override
-  _DrawerState createState() => _DrawerState();
+  _DrawerScreenState createState() => _DrawerScreenState();
 }
 
-class _DrawerState extends State<Drawer> {
+class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(title: Text('Drawer')),
+      body: Container(
+        child: Center(
+          child: Text('Text center')
+        ),
+      ),
     );
   }
 }

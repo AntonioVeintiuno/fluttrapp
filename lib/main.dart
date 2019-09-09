@@ -1,4 +1,5 @@
 import 'package:first_app/src/screens/button.dart';
+import 'package:first_app/src/screens/drawer_screens/drawer.dart';
 import 'package:first_app/src/screens/home.dart';
 import 'package:first_app/src/screens/home_page.dart';
 import 'package:first_app/src/screens/tabs_page.dart';
@@ -15,6 +16,7 @@ void main() {
       '/stateles': (context) => StatlessWidgetExample(),
       '/button': (context) => MyButton(),
       '/home_statefull': (context) => HomePage(),
+      '/drawer': (context) => DrawerScreen(),
     },
   ));
 }
