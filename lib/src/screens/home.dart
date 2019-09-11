@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
         child: ListView(
         children: <Widget>[
           ListTile(title: Text('StateFull'),onTap: (){Navigator.pushNamed(context, '/home_statefull');},),
-          ListTile(title: Text('Statless'),onTap: (){Navigator.pushNamed(context, '/stateles');},),
+          ListTile(title: Text('Statless'),onTap: (){Navigator.pushNamed(context, '/stateless');},),
           ListTile(title: Text('Button'),onTap: (){Navigator.pushNamed(context, '/button');},),
           ListTile(title: Text('Tabs'),onTap: (){Navigator.pushNamed(context, '/tabs');},),
           ListTile(title: Text('Drawer'),onTap: (){Navigator.pushNamed(context, '/drawer');},),
